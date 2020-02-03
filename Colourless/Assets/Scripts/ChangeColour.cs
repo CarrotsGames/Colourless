@@ -33,6 +33,12 @@ public class ChangeColour : MonoBehaviour
                     gameObject.tag = "Yellow";
                 }
                 break;
+            case "WhitePaint":
+                {
+                    gameObject.GetComponent<Renderer>().material.color = Color.white;
+                    gameObject.tag = "White";
+                }
+                break;
         }
     }
 }

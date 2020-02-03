@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class ChangeColour : MonoBehaviour
 {
-    string currentColour;
-    // Start is called before the first frame update
-    void Start()
+ 
+    private void OnTriggerEnter(Collider other)
     {
-  
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        switch(currentColour)
+        switch (other.name)
         {
-            case "A" :
+            case "RedPaint":
                 {
-
+                    gameObject.GetComponent<Renderer>().material.color = Color.red;
+                    gameObject.tag = "Red";
                 }
                 break;
-            case "B":
+            case "BluePaint":
                 {
-
+                    gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                    gameObject.tag = "Blue";
+                }
+                break;
+            case "GreenPaint":
+                {
+                    gameObject.GetComponent<Renderer>().material.color = Color.green;
+                    gameObject.tag = "Green";
+                }
+                break;
+            case "YellowPaint":
+                {
+                    gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+                    gameObject.tag = "Yellow";
                 }
                 break;
         }

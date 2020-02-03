@@ -6,7 +6,7 @@ public class CameraScript : MonoBehaviour
 {
     private const float yAngleMin = 0;
     private const float xAngleMax = 50;
-
+    public GameObject Player;
 
     public Transform lookAt;
     public Transform camTransform;
@@ -30,6 +30,7 @@ public class CameraScript : MonoBehaviour
         currentY += Input.GetAxis("Mouse Y");
 
         currentY = Mathf.Clamp(currentY, yAngleMin, xAngleMax);
+       
     }
 
     // Update is called once per frame

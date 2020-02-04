@@ -7,7 +7,7 @@ public class ChangeColour : MonoBehaviour
  
     private void OnTriggerEnter(Collider other)
     {
-        switch (other.name)
+        switch (other.tag)
         {
             case "RedPaint":
                 {

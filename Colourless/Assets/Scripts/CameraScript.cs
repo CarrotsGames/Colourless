@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     private const float yAngleMin = 0;
-    private const float xAngleMax = 50;
+    private const float xAngleMax = 30;
     public GameObject Player;
 
     public Transform lookAt;

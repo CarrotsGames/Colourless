@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     public float jumpVelocity;
     public float gravity;
     float currentX;
-    Vector3 test;
+    Vector3 rotate;
     private Vector3 moveDir = Vector3.zero;
     // Start is called before the first frame update
     void Start()
@@ -22,17 +22,13 @@ public class Movement : MonoBehaviour
     {
         currentX += Input.GetAxis("Mouse X");
 
-
-        test.x = transform.position.x - Camera.main.transform.position.x;
-        test.z = transform.position.z - Camera.main.transform.position.z;
-        Vector3 Forward = new Vector3(test.x, 0.0f, test.z);
-        Vector3 NewDirection = Vector3.RotateTowards(transform.forward, Forward, 7 * Time.deltaTime, 0);
-        transform.rotation = Quaternion.LookRotation(NewDirection);
-
+        RotatePlayer();
         if (controller.isGrounded)
         {
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDir = Camera.main.transform.TransformDirection(moveDir);
+            moveDir.y = 0;
+            moveDir.Normalize();
             moveDir *= speed;
             if (Input.GetButton("Jump"))
             {
@@ -51,5 +47,16 @@ public class Movement : MonoBehaviour
 
         controller.Move(moveDir * Time.deltaTime);
     
+    }
+
+    void RotatePlayer()
+    {
+
+        //Rotation
+        rotate.x = transform.position.x - Camera.main.transform.position.x;
+        rotate.z = transform.position.z - Camera.main.transform.position.z;
+        Vector3 Forward = new Vector3(rotate.x, 0.0f, rotate.z);
+        Vector3 NewDirection = Vector3.RotateTowards(transform.forward, Forward, 7 * Time.deltaTime, 0);
+        transform.rotation = Quaternion.LookRotation(NewDirection);
     }
 }

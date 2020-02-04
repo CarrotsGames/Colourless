@@ -230,19 +230,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &353293564283343147
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8630809528023973458}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.34, y: 0.25, z: 0.32}
-  m_Center: {x: 0, y: 0.3, z: 0.01}
 --- !u!1 &909929949013767915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2260,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8630809527463931228}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25.87, y: -1.7, z: 0.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2302,6 +2289,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &353293564283343147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630809528023973458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 0.25, z: 0.32}
+  m_Center: {x: 0, y: 0.3, z: 0.01}
+--- !u!114 &1592673920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630809528023973458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee0ec78c55edf047ae390382ae845b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginCooldown: 0
+  coolDownTimer: 5
 --- !u!1 &8644876648880550895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,6 +2723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109253836461752856, guid: 8ecdb8cf2febe9a4eacb3ff2e3736d30,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.844
       objectReference: {fileID: 0}
     - target: {fileID: 7891030279498062948, guid: 8ecdb8cf2febe9a4eacb3ff2e3736d30,
         type: 3}

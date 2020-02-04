@@ -11,30 +11,35 @@ public class ChangeColour : MonoBehaviour
         {
             case "RedPaint":
                 {
+                    other.GetComponent<DisablePaint>().beginCooldown = true;
                     gameObject.GetComponent<Renderer>().material.color = Color.red;
                     gameObject.tag = "Red";
                 }
                 break;
             case "BluePaint":
                 {
+                    other.GetComponent<DisablePaint>().beginCooldown = true;
                     gameObject.GetComponent<Renderer>().material.color = Color.blue;
                     gameObject.tag = "Blue";
                 }
                 break;
             case "GreenPaint":
                 {
+                    other.GetComponent<DisablePaint>().beginCooldown = true;
                     gameObject.GetComponent<Renderer>().material.color = Color.green;
                     gameObject.tag = "Green";
                 }
                 break;
             case "YellowPaint":
                 {
+                    other.GetComponent<DisablePaint>().beginCooldown = true;
                     gameObject.GetComponent<Renderer>().material.color = Color.yellow;
                     gameObject.tag = "Yellow";
                 }
                 break;
             case "WhitePaint":
                 {
+                    other.GetComponent<DisablePaint>().beginCooldown = true;
                     gameObject.GetComponent<Renderer>().material.color = Color.white;
                     gameObject.tag = "White";
                 }

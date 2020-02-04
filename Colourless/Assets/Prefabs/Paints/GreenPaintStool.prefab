@@ -316,19 +316,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.04493555, y: 0.0777749, z: 0.00019502855}
     m_Extent: {x: 0.016357102, y: 0.010907039, z: 0.0019759613}
   m_DirtyAABB: 0
---- !u!65 &1068449400104339218
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9075325029150727705}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.34, y: 0.25, z: 0.32}
-  m_Center: {x: 0, y: 0.3, z: 0.01}
 --- !u!1 &1254554664294224492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,7 +2591,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9075325027610623522}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25.87, y: -1.7, z: -6.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2633,6 +2620,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1068449400104339218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075325029150727705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 0.25, z: 0.32}
+  m_Center: {x: 0, y: 0.3, z: 0.01}
+--- !u!114 &2075891182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075325029150727705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee0ec78c55edf047ae390382ae845b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginCooldown: 0
+  coolDownTimer: 5
 --- !u!1001 &1068449400104339216
 PrefabInstance:
   m_ObjectHideFlags: 0

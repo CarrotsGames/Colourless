@@ -18,12 +18,12 @@ public class DisablePaint : MonoBehaviour
         if(beginCooldown)
         {
             gameObject.GetComponent<BoxCollider>().enabled = false;
-            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            gameObject.GetComponent<SkinnedMeshRenderer>().enabled = false;
             coolDownTimer -= Time.deltaTime;
             if(coolDownTimer < 0)
             {
                 gameObject.GetComponent<BoxCollider>().enabled = true;
-                gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                gameObject.GetComponent<SkinnedMeshRenderer>().enabled = true;
                 beginCooldown = false;
                 coolDownTimer = coolDownStore;
             }

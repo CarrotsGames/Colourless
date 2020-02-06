@@ -14,9 +14,13 @@ public class Teleport : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<Movement>().controller.enabled = false;
-        Debug.Log("AAA");
-        other.transform.position = RespawnPoint.transform.position;
-        other.gameObject.GetComponent<Movement>().controller.enabled = true;
+        if (other.name == "Player")
+        {
+            other.gameObject.GetComponent<Movement>().controller.enabled = false;
+            Debug.Log("AAA");
+            other.transform.position = RespawnPoint.transform.position;
+            other.gameObject.GetComponent<Movement>().controller.enabled = true;
+        }
+
     }
 }

@@ -17,7 +17,7 @@ public class Teleport : MonoBehaviour
         if (other.name == "Player")
         {
             other.gameObject.GetComponent<Movement>().controller.enabled = false;
-            Debug.Log("AAA");
+            Debug.Log("Teleport");
             other.transform.position = RespawnPoint.transform.position;
             other.gameObject.GetComponent<Movement>().controller.enabled = true;
         }
